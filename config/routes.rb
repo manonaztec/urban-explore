@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  get 'bookings/index'
-
-  get 'bookings/create'
-
-  get 'engines/index'
-
-  get 'engines/show'
 
   devise_for :users
   root to: 'pages#home'
