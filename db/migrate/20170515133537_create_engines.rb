@@ -1,4 +1,4 @@
-class CreateEngines < ActiveRecord::Migration[5.1]
+class CreateEngines < ActiveRecord::Migration[5.0]
   def change
     create_table :engines do |t|
       t.string :category
