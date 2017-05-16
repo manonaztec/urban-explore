@@ -23,6 +23,7 @@ ruby '2.3.3'
   gem 'jquery-fileupload-rails'
   gem 'coffee-rails'
 
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'

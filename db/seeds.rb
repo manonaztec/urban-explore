@@ -7,27 +7,27 @@ Category.destroy_all
 categories = [
   {
     name: "e-Skateboard"
-    image_url:
+    photo: "eskate.png"
   }
   {
     name: "e-Bike"
-    image_url:
+    photo: "ebike.jpg"
   }
   {
     name: "Hoverboard"
-    image_url:
+    photo: "hoverboard.png"
   }
   {
     name: "e-Scooter"
-    image_url:
+    photo: "trotinette.jpeg"
   }
   {
-    name: "Hoverboard"
-    image_url:
+    name: "Segway"
+    photo: "segway.png"
   }
   {
     name: "e-Motobike"
-    image_url:
+    photo: "emoto.jpg"
   }
 ]
 
