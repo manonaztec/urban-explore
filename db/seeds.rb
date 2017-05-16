@@ -1,4 +1,9 @@
+
+Engine.destroy_all
+Shop.destroy_all
+User.destroy_all
 Category.destroy_all
+
 categories = ["e-Skateboard", "e-Bike", "Hoverboard", "e-Scooter", "Segway", "e-Motobike" ]
 
 categories.each do |category|
