@@ -1,6 +1,10 @@
-<h1>Engines#show</h1>
-<p>Find me in app/views/engines/show.html.erb</p>
+<div class="container text-center">
+  <h1><%= @engine.name %></h1>
+  <p><%= @engine.category.name %></p>
+  <%= link_to "Back", root_path, class: "btn btn-success" %>
 
-<%= simple_form_for [@engine, @booking] do |f| %>
-  <%= f.submit %>
-<% end %>
+
+  <%= simple_form_for [@engine, @booking] do |f| %>
+    <%= f.submit %>
+  <% end %>
+</div>

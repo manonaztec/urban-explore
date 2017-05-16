@@ -30,7 +30,8 @@ end
 
 40.times do
   engine = Engine.create!(
-    description: Faker::Lorem.paragraph(2),
+    name: Faker::Hipster.word,
+    description: Faker::Hipster.sentence(3),
     price: (10..50).to_a.sample,
     category: Category.all.sample,
     shop: Shop.all.sample
