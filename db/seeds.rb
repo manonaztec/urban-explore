@@ -25,7 +25,7 @@ end
 
 40.times do
   engine = Engine.create!(
-    description: truncate(Faker::Lorem.paragraph(2), :length => 17, :separator => ' '),
+    description: Faker::Lorem.paragraph(2),
     price: (10..50).to_a.sample,
     category: Category.all.sample,
     shop: Shop.all.sample
