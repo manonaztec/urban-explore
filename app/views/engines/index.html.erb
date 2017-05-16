@@ -6,9 +6,11 @@
     <% @engines.each do |engine| %>
       <div class="col-xs-12 col-sm-4">
         <%= link_to engine_path(engine) do %>
-          <div class="card text-center">
-            <h2><%= engine.category.name %></h2>
-            <p><%= engine.description %></p>
+          <div class= "card-link">
+            <div class="card text-center">
+              <h2><%= engine.category.name %></h2>
+              <p><%= engine.description %></p>
+            </div>
           </div>
         <% end %>
       </div>

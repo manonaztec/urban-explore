@@ -4,7 +4,32 @@ Shop.destroy_all
 User.destroy_all
 Category.destroy_all
 
-categories = ["e-Skateboard", "e-Bike", "Hoverboard", "e-Scooter", "Segway", "e-Motobike" ]
+categories = [
+  {
+    name: "e-Skateboard"
+    image_url:
+  }
+  {
+    name: "e-Bike"
+    image_url:
+  }
+  {
+    name: "Hoverboard"
+    image_url:
+  }
+  {
+    name: "e-Scooter"
+    image_url:
+  }
+  {
+    name: "Hoverboard"
+    image_url:
+  }
+  {
+    name: "e-Motobike"
+    image_url:
+  }
+]
 
 categories.each do |category|
   Category.create!(name: category)

@@ -18,6 +18,11 @@ ruby '2.3.3'
   gem 'devise'
   gem 'faker'
 
+  gem 'cloudinary', '1.1.7'
+  gem 'attachinary', github: 'assembler/attachinary'
+  gem 'jquery-fileupload-rails'
+  gem 'coffee-rails'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
