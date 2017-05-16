@@ -3,7 +3,6 @@
   <p><%= @engine.category.name %></p>
   <%= link_to "Back", root_path, class: "btn btn-success" %>
 
-
   <%= simple_form_for [@engine, @booking] do |f| %>
     <%= f.submit %>
   <% end %>
