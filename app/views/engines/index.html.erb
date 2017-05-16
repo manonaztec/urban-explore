@@ -1,2 +1,17 @@
-<h1>Engines#index</h1>
-<p>Find me in app/views/engines/index.html.erb</p>
+<h1 class="text-center">Check our wonderfull transportation devices</h1>
+<!-- <p>Find me in app/views/engines/index.html.erb</p> -->
+
+<div class="container ">
+  <div class="row">
+    <% @engines.each do |engine| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to engine_path(engine) do %>
+          <div class="card text-center">
+            <h2><%= engine.category.name %></h2>
+            <p><%= engine.description %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
