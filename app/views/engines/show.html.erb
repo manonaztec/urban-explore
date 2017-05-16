@@ -1,10 +1,15 @@
 <div class="container text-center">
   <h1><%= @engine.name %></h1>
-  <p><%= @engine.category.name %></p>
-  <%= link_to "Back", root_path, class: "btn btn-success" %>
+  </h3><%= @engine.category.name %></h3>
+  <p> <%= @engine.description %> </p>
+  <strong> <%= @engine.price %> €/per day </strong>
+
 
 
   <%= simple_form_for [@engine, @booking] do |f| %>
-    <%= f.submit %>
-  <% end %>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>
+
+  <%= link_to "Back", engines_path, class: "btn btn-success" %>
+
 </div>
