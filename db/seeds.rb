@@ -37,3 +37,4 @@ end
     shop: Shop.all.sample
     )
 end
+
