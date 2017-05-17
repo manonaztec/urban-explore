@@ -10,5 +10,13 @@
       <li><a href="">Event</a></li>
       <li><a href="">Collection</a></li>
     </ul>
+
+    <% if user_signed_in? %>
+      <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30"%>
+      <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown"%>
+    <% else %>
+      <%= link_to 'sign up', new_user_registration_path %>
+    <% end %>
   </div>
 </nav>
+
