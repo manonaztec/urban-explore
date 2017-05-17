@@ -1,15 +1,20 @@
 <div class="container text-center">
-  <h1><%= @engine.name %></h1>
-  </h3><%= @engine.category.name %></h3>
-  <p> <%= @engine.description %> </p>
-  <strong> <%= @engine.price %> €/per day </strong>
+    <h1><%= @engine.name %></h1>
+    </h3><%= @engine.category.name %></h3>
 
+  <div class="engine_detail_image">
+    <%= cl_image_tag(@engine.category.photo.path, { size: '550x350', crop: :fit}) %>
+  </div>
 
+   <p> <%= @engine.description %> </p>
+    <strong> <%= @engine.price %> €/per day </strong>
 
-  <%= simple_form_for [@engine, @booking] do |f| %>
-  <%= f.submit class: "btn btn-success" %>
-<% end %>
-
-  <%= link_to "Back", engines_path, class: "btn btn-success" %>
-
+  <div class="booking_buttons">
+    <%= simple_form_for [@engine, @booking] do |f| %>
+      <%= f.button :submit, "Book Now", class: "engine_detail_booking_buttons btn btn-success"%>
+    <% end %>
+    <%= link_to "Back", engines_path, class: "engine_detail_booking_buttons btn btn-success" %>
+  </div>
 </div>
+
+
