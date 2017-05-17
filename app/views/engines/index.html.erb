@@ -1,4 +1,4 @@
-<h1 class="text-center">Check our wonderfull transportation devices</h1>
+<h1 class="text-center">Ca roule!</h1>
 <!-- <p>Find me in app/views/engines/index.html.erb</p> -->
 
 <div class="container ">
@@ -6,9 +6,11 @@
     <% @engines.each do |engine| %>
       <div class="col-xs-12 col-sm-4">
         <%= link_to engine_path(engine) do %>
-          <div class="card text-center">
-            <h2><%= engine.category.name %></h2>
-            <p><%= engine.description %></p>
+          <div class= "card-link">
+            <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path engine.category.photo.path, height: 300, width: 400, crop: :fill %>')">
+              <h2><%= engine.category.name %></h2>
+              <p><%= engine.description %></p>
+            </div>
           </div>
         <% end %>
       </div>

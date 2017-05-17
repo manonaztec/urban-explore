@@ -1,15 +1,48 @@
+print "On commence le Seed"
 
 Engine.destroy_all
 Shop.destroy_all
 User.destroy_all
 Category.destroy_all
 
-categories = ["e-Skateboard", "e-Bike", "Hoverboard", "e-Scooter", "Segway", "e-Motobike" ]
+categories = [
+  {
+    name: "e-Skateboard",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013902/esakte_yuredy.jpg"
+  },
+  {
+    name: "e-Bike",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/velo_nlybwa.png"
+  },
+  {
+    name: "Hoverboard",
+    photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1495014242/hoverboard_schrqq.png"
+  },
+  {
+    name: "e-Scooter",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/trottinette_s5viga.png"
+  },
+  {
+    name: "Segway",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/segway_cphbta.png"
+  },
+  {
+    name: "e-Motobike",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/emotobike_cv89qq.png"
+  }
+]
 
-categories.each do |category|
-  Category.create!(name: category)
-  print "."
-end
+# categories.each do |category|
+#   Category.create!(name: category)
+
+# end
+
+Category.create!(name: "e-Skateboard", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013902/esakte_yuredy.jpg")
+Category.create!(name: "e-Bike", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/velo_nlybwa.png")
+Category.create!(name: "Hoverboard", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495014242/hoverboard_schrqq.png")
+Category.create!(name: "e-Scooter", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/trottinette_s5viga.png")
+Category.create!(name: "Segway", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/segway_cphbta.png")
+Category.create!(name: "e-Motobike", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/emotobike_cv89qq.png")
 
 30.times do
   user = User.create!(
@@ -37,4 +70,7 @@ end
     shop: Shop.all.sample
     )
 end
+
+print "Le seed est fini"
+
 
