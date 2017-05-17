@@ -1,3 +1,4 @@
+print "On commence le Seed"
 
 Engine.destroy_all
 Shop.destroy_all
@@ -6,35 +7,42 @@ Category.destroy_all
 
 categories = [
   {
-    name: "e-Skateboard"
-    photo: "eskate.png"
-  }
+    name: "e-Skateboard",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg"
+  },
   {
-    name: "e-Bike"
-    photo: "ebike.jpg"
-  }
+    name: "e-Bike",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg"
+  },
   {
-    name: "Hoverboard"
-    photo: "hoverboard.png"
-  }
+    name: "Hoverboard",
+    photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg"
+  },
   {
-    name: "e-Scooter"
-    photo: "trotinette.jpeg"
-  }
+    name: "e-Scooter",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg"
+  },
   {
-    name: "Segway"
-    photo: "segway.png"
-  }
+    name: "Segway",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg"
+  },
   {
-    name: "e-Motobike"
-    photo: "emoto.jpg"
+    name: "e-Motobike",
+    photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg"
   }
 ]
 
-categories.each do |category|
-  Category.create!(name: category)
-  print "."
-end
+# categories.each do |category|
+#   Category.create!(name: category)
+
+# end
+
+Category.create!(name: "e-Skateboard", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg")
+Category.create!(name: "e-Bike", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg")
+Category.create!(name: "Hoverboard", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg")
+Category.create!(name: "e-Scooter", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg")
+Category.create!(name: "Segway", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg")
+Category.create!(name: "e-Motobike", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495012326/trotinette_lm2cdx.jpg")
 
 30.times do
   user = User.create!(
@@ -62,4 +70,7 @@ end
     shop: Shop.all.sample
     )
 end
+
+print "Le seed est fini"
+
 
