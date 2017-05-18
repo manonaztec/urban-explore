@@ -1,18 +1,36 @@
-.booking-card{
-  width: 400px;
-  color: black;
-  background-color: white;
-  position: relative;
-  margin: 30px;
-  text-decoration: none;
-  border: #11BFAE 1px solid;
-}
-
-#booking-description{
-    margin: 5px;
-}
-
 .booking-container{
-  margin-left: 15px;
+  padding: 30px;
+  width: 1000px;
+  border: 1px solid black;
+  margin: auto;
+}
+.booking-date{
+  padding: 5px;
 
+}
+
+.booking-descrpiton{
+  display: flex;
+  padding: 5px;
+}
+
+.booking-data{
+  height: 150px;
+  width: 50%;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.booking-img{
+  width: 50%;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid grey;
+  background-size: cover;
+  background-position: center center;
+}
+
+#booking-title{
+  margin-bottom: 50px;
 }
