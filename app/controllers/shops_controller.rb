@@ -3,4 +3,5 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
     @alert_message = "You are viewing #{@shop.name}"
   end
+
 end

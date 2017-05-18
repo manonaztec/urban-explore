@@ -57,6 +57,7 @@ Shop.create!(name: "Green riders", address: "1, Cours Victor Hugo, Bordeaux", te
 Shop.create!(name: "Roll it", address: "2, Cours Pasteur, Bordeaux", telephone: "06 77 88 99 00")
 Shop.create!(name: "Mille et une roue", address: "3, Cours du Maréchal Foch , Bordeaux", telephone: "06 77 88 99 00")
 Shop.create!(name: "Fantastic Electric", address: "4, Cours du Medoc, Bordeaux", telephone: "06 77 88 99 00")
+Shop.create!(name: "Jean michel skateboard", address: "Marseille", telephone: "06 77 88 99 00")
 
 
 9.times do
