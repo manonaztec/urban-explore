@@ -31,25 +31,7 @@
      <%= link_to "Back", engines_path, class: "btn btn-success btn-lg margin-button" %>
     </div>
   </div>
+  <%= image_tag_map_for(@engine, { size: "600x200", pin_color: "0xF61067" }) %>
 
-
- <div id="map" style="width: 100%; height: 600px;"></div>
-  <% content_for(:after_js) do %>
-     <script type="text/javascript">
-      $(document).on('ready', function() {
-        var handler = Gmaps.build('Google', { markers: { clusterer: undefined }});
-        handler.buildMap({ internal: { id: 'map' } }, function(){
-          markers = handler.addMarkers([
-            {
-              "lat": <%= @engine.shop.latitude %>,
-              "lng": <%= @engine.shop.longitude %>,
-            }
-          ]);
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
-        });
-      })
-    </script>
-  <% end %>
 
 
