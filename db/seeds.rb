@@ -1,9 +1,17 @@
 print "On commence le Seed"
 
-Engine.destroy_all
-Shop.destroy_all
-User.destroy_all
-Category.destroy_all
+models = [
+  Booking,
+  Engine,
+  Shop,
+  User,
+  Category
+]
+
+
+models.each do |model|
+  model.destroy_all
+end
 
 categories = [
   {
