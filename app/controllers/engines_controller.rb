@@ -9,5 +9,6 @@ class EnginesController < ApplicationController
   def show
     @engine = Engine.find(params[:id])
     @booking = Booking.new
+    @shop = @engine.shop
   end
 end
