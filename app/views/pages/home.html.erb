@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner">
+  <div class="container">
+    <div class="banner-content">
+      <h1> Roulez Jeunesse! </h1>
+      <p> An easy and sustainable way to explore cities </p>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div id="form-homepage">
+            <%= simple_form_for :search, url: engines_path, method: :get do |f| %>
+              <%= f.input :address, label: false, placeholder: "Where" %>
+              <%= f.input :datetime, label: false, placeholder: "When" %>
+              <%= f.submit 'Get it', class: "btn btn-success btn-lg" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
