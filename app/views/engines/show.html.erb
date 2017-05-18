@@ -15,6 +15,25 @@
     <% end %>
     <%= link_to "Back", engines_path, class: "engine_detail_booking_buttons btn btn-success" %>
   </div>
-</div>
+
+
+ <div id="map" style="width: 100%; height: 600px;"></div>
+  <% content_for(:after_js) do %>
+     <script type="text/javascript">
+      $(document).on('ready', function() {
+        var handler = Gmaps.build('Google', { markers: { clusterer: undefined }});
+        handler.buildMap({ internal: { id: 'map' } }, function(){
+          markers = handler.addMarkers([
+            {
+              "lat": <%= @engine.shop.latitude %>,
+              "lng": <%= @engine.shop.longitude %>,
+            }
+          ]);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+        });
+      })
+    </script>
+  <% end %>
 
 
