@@ -7,16 +7,14 @@
       <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
           <div id="form-homepage">
-            <form action="">
-              <div class="form-content">
-                <input type="text" class="" placeholder="Choose a city">
-                <input type="text" id="datetimepicker" placeholder="Choose a date">
-              </div>
-            </form>
+            <%= simple_form_for :search, url: engines_path, method: :get do |f| %>
+              <%= f.input :address, label: false, placeholder: "Where" %>
+              <%= f.input :datetime, label: false, placeholder: "When" %>
+              <%= f.submit 'Get it', class: "btn btn-success btn-lg" %>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
-    <%= link_to "GET IT", engines_path, class: "btn btn-success btn-lg" %>
   </div>
 </div>
