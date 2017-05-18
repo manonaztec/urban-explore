@@ -1,19 +1,35 @@
-<div class="container text-center">
-    <h1><%= @engine.name %></h1>
-    </h3><%= @engine.category.name %></h3>
-
-  <div class="engine_detail_image">
-    <%= cl_image_tag(@engine.category.photo.path, { size: '550x350', crop: :fit}) %>
+<div class="text-center">
+  <div class="engine-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @engine.category.photo.path, height: 300, width: 400, crop: :fill %>')">
   </div>
 
-   <p> <%= @engine.description %> </p>
-    <strong> <%= @engine.price %> €/per day </strong>
+  <div>
+    <h1><%= @engine.name %></h1>
+    </h3><%= @engine.category.name %></h3>
+  </div>
 
-  <div class="booking_buttons">
-    <%= simple_form_for [@engine, @booking] do |f| %>
-      <%= f.button :submit, "Book Now", class: "engine_detail_booking_buttons btn btn-success"%>
-    <% end %>
-    <%= link_to "Back", engines_path, class: "engine_detail_booking_buttons btn btn-success" %>
+  <div class="engine-content">
+    <p> <%= @engine.description %> </p>
+    <strong> <%= @engine.price %> €/per day </strong>
+  </div>
+
+  <div class="form-group" id="quantity-input">
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-5">
+        <input class="form-control text-center" id="engine-quantity" type="text" placeholder="Quantity ?">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-5">
+      <%= simple_form_for [@engine, @booking] do |f| %>
+        <%= f.button :submit, "Book Now", class: "btn btn-success btn-lg margin-button"%>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-5">
+     <%= link_to "Back", engines_path, class: "btn btn-success btn-lg margin-button" %>
+    </div>
   </div>
 
 

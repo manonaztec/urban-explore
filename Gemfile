@@ -23,8 +23,9 @@ ruby '2.3.3'
   gem 'attachinary', github: 'assembler/attachinary'
   gem 'jquery-fileupload-rails'
   gem 'coffee-rails'
-
   gem 'omniauth-facebook'
+  gem 'momentjs-rails', '>= 2.9.0'
+  gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
   gem "gmaps4rails"
 
