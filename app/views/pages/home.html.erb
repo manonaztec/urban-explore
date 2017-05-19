@@ -4,17 +4,82 @@
     <div class="banner-content">
       <h1> Roulez Jeunesse! </h1>
       <p> An easy and sustainable way to explore cities </p>
-      <div class="row">
+      <div class="banner_form row">
         <div class="col-xs-8 col-xs-offset-2">
-          <div id="form-homepage">
-            <%= simple_form_for :search, url: engines_path, method: :get do |f| %>
-              <%= f.input :address, label: false, placeholder: "Where" %>
-              <%= f.input :datetime, label: false, placeholder: "When" %>
+          <div id="text-inline form-homepage">
+            <%= simple_form_for :search, url: engines_path, method: :get, html: {class: 'form-inline' } do |f| %>
+              <div class="form-group">
+                <%= f.input :address, label: false, placeholder: "Where" %>
+              </div>
+              <div class="form-group">
+                <%= f.input :datetime, label: false, placeholder: "When" %>
+              </div>
+
               <%= f.submit 'Get it', class: "btn btn-success btn-lg" %>
             <% end %>
           </div>
         </div>
       </div>
-    </div>
+        <div class= "pictos_banner text-center padded features">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <%= image_tag "segway3.png", {class: "picto"}%>
+                <h3> Mobility </h3>
+                <p> Getting around easily </p>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <%= image_tag "logo_green.png", {class: "picto"}%>
+                <h3> Sustainability</h3>
+                <p> Make a green choice </p>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <%= image_tag "logo_city.png", {class: "picto"}%>
+                <h3> Discovery </h3>
+                <p> Explore on your own </p>
+              </div>
+               <div class="col-xs-12 col-sm-6 col-lg-3">
+                <%= image_tag "calendar.png", {class: "picto"}%>
+                <h3> Flexibility </h3>
+                <p> Reserve until the last minute </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
+
+
+  <div class="contact text-center padded">
+    <h3> Leave us your mail and get news ! </h3>
+    <form class="form-inline">
+      <label for="your-email"> Your email</label>
+      <input type="email" placeholder="explorer@gmail.com" class="form-control">
+      <input type="submit" value="Suscribe now !" class= "btn btn-success">
+    </form>
+  </div>
+
+
+<!-- <div class="wrapper-grey">
+  <div class= "text-center padded features">
+    <div class="container">
+      <div class="row">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
+          <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+        </div>
+         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
+          <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
