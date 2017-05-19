@@ -1,41 +1,33 @@
-.card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-color: grey;
-  color: white;
-  position: relative;
-  border: solid, black, 1px;
-  margin: 10px;
-  padding : 5px;
-  text-decoration: none;
-  position: relative;
+.container{
+  padding: 5px;
+}
+.card{
+  padding: 5px;
+  height: 400px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 15px;
 }
-
-.card-link p {
+.card-img{
+  height: 200px;
+  padding: 5px;
+  background-size: 100%;
+  background-position: center center;
+  margin-bottom: 5px;
+}
+.card-description {
+  position: relative;
+  color: black;
+  padding: 5px;
+  height: 150px;
   text-decoration: none;
 }
 
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 10px;
-  text-transform: uppercase;
-  font-size: 14px;
+#engine-name{
+  font-size: 20px;
+  color: #25C4B5;
 }
 
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  text-transform: capitalize;
+.price{
+ font-size: 20px;
+ color: #25C4B5;
 }
-.card-description h2 {
-  font-size: 24px;
-}
-.card-description p {
-  font-size: 13px;
-  }
-
