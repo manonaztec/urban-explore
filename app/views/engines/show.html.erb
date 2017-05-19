@@ -1,3 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-4">
+        <div id="form-show">
+          <%= simple_form_for :search, url: engines_path, method: :get,
+            html: { class: 'form-inline' } do |f| %>
+            <%= f.input :address, label: false, placeholder: "Where" %>
+            <%= f.input :datetime, label: false, placeholder: "When" %>
+            <%= f.submit 'Get it', class: "btn btn-success btn-sm" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
 <div class="engine-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @engine.category.photo.path, height: 300, width: 400, crop: :fill %>')">
 </div>
 
