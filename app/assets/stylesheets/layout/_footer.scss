@@ -1,7 +1,22 @@
-#footer a {
-  color: lightgrey;
-  font-size: 15px;
-}
-#footer a:hover {
-  color: white;
+#footer {
+  li {
+    text-align: center;
+    display: inline;
+    list-style: none; /* pour enlever les puces sur IE7 */
+    margin: 10px;
+  }
+
+  a {
+    color: #11BFAE;
+    font-size: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a:hover {
+    list-style: none;
+    color: white;
+    text-align: center;
+  }
 }

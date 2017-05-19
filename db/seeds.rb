@@ -1,9 +1,17 @@
 print "On commence le Seed"
 
-Engine.destroy_all
-Shop.destroy_all
-User.destroy_all
-Category.destroy_all
+models = [
+  Booking,
+  Engine,
+  Shop,
+  User,
+  Category
+]
+
+
+models.each do |model|
+  model.destroy_all
+end
 
 categories = [
   {
@@ -44,7 +52,7 @@ Category.create!(name: "e-Scooter", photo_url: "http://res.cloudinary.com/dcsrdz
 Category.create!(name: "Segway", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/segway_cphbta.png")
 Category.create!(name: "e-Motobike", photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013903/emotobike_cv89qq.png")
 
-30.times do
+4.times do
   user = User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -53,15 +61,14 @@ Category.create!(name: "e-Motobike", photo_url: "http://res.cloudinary.com/dcsrd
     )
 end
 
-10.times do
-  shop = Shop.create!(
-    name: Faker::Company.name,
-    address: Faker::Address.street_address,
-    telephone: Faker::PhoneNumber
-    )
-end
+Shop.create!(name: "Green riders", address: "1, Cours Victor Hugo, Bordeaux", telephone: "06 77 88 99 00")
+Shop.create!(name: "Roll it", address: "2, Cours Pasteur, Bordeaux", telephone: "06 77 88 99 00")
+Shop.create!(name: "Mille et une roue", address: "3, Cours du Maréchal Foch , Bordeaux", telephone: "06 77 88 99 00")
+Shop.create!(name: "Fantastic Electric", address: "4, Cours du Medoc, Bordeaux", telephone: "06 77 88 99 00")
+Shop.create!(name: "Jean michel skateboard", address: "Marseille", telephone: "06 77 88 99 00")
 
-40.times do
+
+9.times do
   engine = Engine.create!(
     name: Faker::Hipster.word,
     description: Faker::Hipster.sentence(3),

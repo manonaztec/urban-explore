@@ -1,16 +1,37 @@
-.card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-color: grey;
-  color: white;
+#title-engines{
+  margin: 60px;
+}
+
+.container{
+  padding: 5px;
+}
+.card{
+  padding: 5px;
+  height: 400px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 15px;
+}
+.card-img{
+  height: 200px;
+  padding: 5px;
+  background-size: 100%;
+  background-position: center center;
+  margin-bottom: 5px;
+}
+.card-description {
   position: relative;
-  border: solid, black, 1px;
-  margin: 10px;
-  padding : 5px;
+  color: black;
+  padding: 5px;
+  height: 150px;
   text-decoration: none;
 }
 
-.card-link p {
-  text-decoration: none;
+#engine-name{
+  font-size: 20px;
+  color: #25C4B5;
+}
+
+.price{
+ font-size: 20px;
+ color: #25C4B5;
 }

@@ -1,0 +1,70 @@
+.engine-content {
+  margin: 15%;
+}
+
+.margin-button {
+  margin-bottom: 10px;
+}
+
+.engine-image {
+  height: 50vh;
+  background-size: cover !important;
+  background-position: 50% 50%;
+  border-color: black;
+  border-width: 2px;
+}
+
+.reviews {
+  height: 175px;
+  // background-size: cover !important;
+  // background-color: rgba(17, 191, 174, 0.2);
+  // color: white;
+  // margin: 0;
+  position: relative;
+}
+
+.user-review {
+  position: absolute;
+  left: 80px;
+  bottom: 40px;
+}
+
+.avatar-user {
+  position: absolute;
+  left: 100px;
+
+.reviews-title {
+  position: absolute;
+  left: 30px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+}
+#engine-title-category {
+  margin-bottom: 50px;
+}
+
+#engine-description {
+  margin: 20px;
+}
+
+
+#engine-quantity {
+  margin-bottom: 50px;
+}
+
+#input-engine-show {
+  margin: 10px;
+}
+
+#form-show {
+  margin: 10px;
+}
+
+.image-map {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  margin-right: 0px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 15px;
+}

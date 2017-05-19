@@ -1,19 +1,49 @@
-<h1 class="text-center">Ca roule!</h1>
-<!-- <p>Find me in app/views/engines/index.html.erb</p> -->
 
-<div class="container ">
+<h1 id="title-engines" class="text-center"><strong>Chose your favorite engine!</strong></h1>
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-4">
+        <div id="form-index">
+          <%= simple_form_for :search, url: engines_path, method: :get,
+            html: { class: 'form-inline' } do |f| %>
+            <%= f.input :address, label: false, placeholder: "Where" %>
+            <%= f.input :datetime, label: false, placeholder: "When" %>
+            <%= f.submit 'Get it', class: "btn btn-success btn-sm" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<h1 class="text-center">Ca roule!</h1>
+
+
+<div class="container">
   <div class="row">
     <% @engines.each do |engine| %>
       <div class="col-xs-12 col-sm-4">
+        <div class="card">
         <%= link_to engine_path(engine) do %>
-          <div class= "card-link">
-            <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path engine.category.photo.path, height: 300, width: 400, crop: :fill %>')">
-              <h2><%= engine.category.name %></h2>
-              <p><%= engine.description %></p>
-            </div>
+          <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path engine.category.photo.path,crop: :fill %>')"></div>
+          <% end %>
+          <div class="card-description">
+            <ul class="list-unstyled">
+              <li id="engine-name"><strong>--<%=engine.name.capitalize %>--</strong></li>
+              <br>
+              <li><strong>Category:</strong> <i><%= engine.category.name %></i></li>
+              <li><strong>Description:</strong> <i><%= engine.description %></i></li>
+              <li><strong>Shop:</strong> <i><%= engine.shop.name %></i></li>
+            </ul>
           </div>
-        <% end %>
+          <div class="price"><strong><%= engine.price %>€</strong></div>
+        </div>
       </div>
     <% end %>
   </div>
 </div>
+
+
