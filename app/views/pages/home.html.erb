@@ -1,21 +1,21 @@
 <div class="banner">
   <div class="container">
     <div class="banner-content">
-      <h1> Roulez Jeunesse! </h1>
+      <h1> You gonna ride ! </h1>
       <p> An easy and sustainable way to explore cities </p>
       <div class="banner_form row">
         <div class="col-xs-8 col-xs-offset-2">
 
-       
+
 
 
           <div class="form-homepage">
             <%= simple_form_for :search, url: engines_path, method: :get,
               html: { class: 'form-inline' } do |f| %>
-              <%= f.input :address, label: false, placeholder: "Where" %>
-              <%= f.input :datetime, label: false, placeholder: "When" %>
+              <%= f.input :address, label: false, placeholder: "Where", input_html: { class: 'form-control radius_input' } %>
+              <%= f.input :datetime, label: false, placeholder: "When", input_html: { class: 'form-control radius_input' } %>
 
-              <%= f.submit 'Get it', class: "btn btn-success btn-lg" %>
+              <%= f.submit 'Get it', class: "btn-success btn-lg radius_button" %>
             <% end %>
           </div>
         </div>
@@ -61,25 +61,27 @@
   </div>
 
 
-<!-- <div class="wrapper-grey">
+<div class="wrapper-grey">
   <div class= "text-center padded features">
     <div class="container">
       <div class="row">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-          <div class="card-category">Popular</div>
+        <div class="card style_popular " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dcsrdzgza/image/upload/v1495013902/esakte_yuredy.jpg');">
+          <div class="text-popular">Popular</div>
             <div class="card-description">
-              <h2>Some stuff</h2>
-              <p>Very cool stuff, useful and smart</p>
+              <h2> E-skateboard</h2>
+              <p>Makes getting around easier than ever</p>
+              <input type="submit" value="Discover now !" class= "btn btn-success">
             </div>
         </div>
-         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-          <div class="card-category">Popular</div>
+         <div class="card style_popular " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dcsrdzgza/image/upload/v1495014242/hoverboard_schrqq.png');">
+          <div class="text-popular">Popular</div>
             <div class="card-description">
-              <h2>Some stuff</h2>
-              <p>Very cool stuff, useful and smart</p>
+              <h2> Hoverboard </h2>
+              <p> Experience the future of personal mobility in the city </p>
+              <input type="submit" value="Discover now !" class= "btn btn-success">
             </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>

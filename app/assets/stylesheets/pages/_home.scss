@@ -2,6 +2,11 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+.style_popular p {
+  color: white;
+}
+
 .picto {
   width: 40px;
   padding-top: 80px;
@@ -25,4 +30,18 @@
 
 .banner_form {
   padding-top: 20px;
+}
+
+.radius_input {
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.radius_button {
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.text-popular {
+  color: white;
 }
