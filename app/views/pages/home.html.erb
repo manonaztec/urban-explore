@@ -1,4 +1,3 @@
-
 <div class="banner">
   <div class="container">
     <div class="banner-content">
@@ -6,14 +5,15 @@
       <p> An easy and sustainable way to explore cities </p>
       <div class="banner_form row">
         <div class="col-xs-8 col-xs-offset-2">
-          <div id="text-inline form-homepage">
-            <%= simple_form_for :search, url: engines_path, method: :get, html: {class: 'form-inline' } do |f| %>
-              <div class="form-group">
-                <%= f.input :address, label: false, placeholder: "Where" %>
-              </div>
-              <div class="form-group">
-                <%= f.input :datetime, label: false, placeholder: "When" %>
-              </div>
+
+       
+
+
+          <div class="form-homepage">
+            <%= simple_form_for :search, url: engines_path, method: :get,
+              html: { class: 'form-inline' } do |f| %>
+              <%= f.input :address, label: false, placeholder: "Where" %>
+              <%= f.input :datetime, label: false, placeholder: "When" %>
 
               <%= f.submit 'Get it', class: "btn btn-success btn-lg" %>
             <% end %>
