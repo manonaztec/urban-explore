@@ -8,6 +8,6 @@ module ApplicationHelper
   def image_tag_map_for engine, options = {}
     size = options[:size] || "600x300"
     pin_color = options[:pin_color] || "red"
-    image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{engine.shop.address}&zoom=13&size=#{size}&maptype=roadmap&markers=color:#{pin_color}%7C#{engine.shop.address}&key=AIzaSyChOzXBuSMfBkfDtaSg4_WKCcjWOYDYk8Y"
+    image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{engine.shop.address}&zoom=13&size=#{size}&maptype=roadmap&markers=color:#{pin_color}%7C#{engine.shop.address}&key=AIzaSyChOzXBuSMfBkfDtaSg4_WKCcjWOYDYk8Y", { class: "image-map" }
   end
 end
