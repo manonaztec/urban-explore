@@ -1,37 +1,45 @@
-<div class="text-center">
-  <div class="engine-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @engine.category.photo.path, height: 300, width: 400, crop: :fill %>')">
-  </div>
-
-  <div>
-    <h1><%= @engine.name %></h1>
-    </h3><%= @engine.category.name %></h3>
-  </div>
-
-  <div class="engine-content">
-    <p> <%= @engine.description %> </p>
-    <strong> <%= @engine.price %> €/per day </strong>
-  </div>
-
-  <div class="form-group" id="quantity-input">
+<div class="container">
     <div class="row">
-      <div class="col-xs-2 col-xs-offset-5">
-        <input class="form-control text-center" id="engine-quantity" type="text" placeholder="Quantity ?">
+      <div class="col-xs-6 col-xs-offset-4">
+        <div id="form-show">
+          <%= simple_form_for :search, url: engines_path, method: :get,
+            html: { class: 'form-inline' } do |f| %>
+            <%= f.input :address, label: false, placeholder: "Where" %>
+            <%= f.input :datetime, label: false, placeholder: "When" %>
+            <%= f.submit 'Get it', class: "btn btn-success btn-sm" %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
+</div>
+
+<div class="engine-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @engine.category.photo.path, height: 300, width: 400, crop: :fill %>')">
+</div>
+
+<div class="container text-center">
   <div class="row">
-    <div class="col-xs-2 col-xs-offset-5">
-      <%= simple_form_for [@engine, @booking] do |f| %>
+    <div class="col-md-6">
+      <div id="engine-title-category">
+        <h1><%= @engine.name %></h1>
+        </h3><%= @engine.category.name %></h3>
+      </div>
+      <div id="engine-description">
+        <p> <%= @engine.description %> </p>
+        <strong> <%= @engine.price %> €/per day </strong>
+      </div>
+      <div>
+        <input class="form-control text-center" id="engine-quantity" type="text" placeholder="Quantity ?">
+      </div>
+      <div>
+        <%= simple_form_for [@engine, @booking] do |f| %>
         <%= f.button :submit, "Book Now", class: "btn btn-success btn-lg margin-button"%>
-      <% end %>
+        <% end %>
+        <%= link_to "Back", engines_path, class: "btn btn-success btn-lg margin-button" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <%= image_tag_map_for(@engine, { size: "650x550", pin_color: "0xF61067" }) %>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-2 col-xs-offset-5">
-     <%= link_to "Back", engines_path, class: "btn btn-success btn-lg margin-button" %>
-    </div>
-  </div>
-  <%= image_tag_map_for(@engine, { size: "600x200", pin_color: "0xF61067" }) %>
-
-
+</div>
 

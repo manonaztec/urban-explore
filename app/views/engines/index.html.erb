@@ -1,4 +1,26 @@
+
 <h1 id="title-engines" class="text-center"><strong>Chose your favorite engine!</strong></h1>
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-4">
+        <div id="form-index">
+          <%= simple_form_for :search, url: engines_path, method: :get,
+            html: { class: 'form-inline' } do |f| %>
+            <%= f.input :address, label: false, placeholder: "Where" %>
+            <%= f.input :datetime, label: false, placeholder: "When" %>
+            <%= f.submit 'Get it', class: "btn btn-success btn-sm" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<h1 class="text-center">Ca roule!</h1>
+
 
 <div class="container">
   <div class="row">
