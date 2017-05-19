@@ -2,11 +2,13 @@
 
 <div class="booking-container">
   <% current_user.bookings.each do |booking| %>
-  <div class="booking-date">
-    <p><strong>The <%= booking.created_at.strftime("%d %b %Y") %>
-  </div>
+
   <div class=booking-descrpiton>
     <div class="booking-data">
+      <div class="booking-date">
+        <p><strong><%= booking.created_at.strftime("%d %b %Y") %></strong></p>
+      </div>
+
       <ul class="list-unstyled">
           <li><strong>Article: </strong><%=booking.engine.name.capitalize %></li>
           <li><strong>Category: </strong><%= booking.engine.category.name %></li>
@@ -20,3 +22,17 @@
   <% end %>
 </div>
 
+
+
+<div class="booking-container">
+  <% current_user.bookings.each do |booking| %>
+  <div class="booking-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path booking.engine.category.photo.path, height: 300, width: 400, crop: :fill %>')">
+    <ul class="list-unstyled">
+            <li><strong>Article: </strong><%=booking.engine.name.capitalize %></li>
+            <li><strong>Category: </strong><%= booking.engine.category.name %></li>
+            <li><strong>At Shop: </strong><%= booking.engine.shop.name %></li>
+            <li><strong>Price: </strong> <%= booking.engine.price %> €</li>
+    </ul>
+  </div>
+  <% end %>
+</div>
