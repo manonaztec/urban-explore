@@ -1,5 +1,6 @@
 #title-engines{
-  margin: 60px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .container{
@@ -32,6 +33,9 @@
 }
 
 .price{
+  display: flex;
+  justify-content: flex-end;
  font-size: 20px;
  color: #25C4B5;
+ padding-right: 10px;
 }
